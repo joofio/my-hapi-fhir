@@ -1,26 +1,27 @@
 version: '3.7'
 services:
-  web:
-    image: "hapiproject/hapi:v5.3.0"
+  fhir-server:
+    image: "hapiproject/hapi:latest"
     ports:
       - "8080:8080"
     volumes:
-     - /mnt/c/Users/joaof/Desktop/docker:/data/hapi
+     - /mnt/c/Users/joaof/Desktop/my-hapi-fhir:/data/hapi
     environment:
-     SPRING_CONFIG_LOCATION: 'file:////data/hapi/kl.yml'
+     SPRING_CONFIG_LOCATION: 'file:////data/hapi/my.yml'
       #      hapi.fhir.default_encoding: "json" 
     depends_on:
         - mariadb
   mariadb:
     image: mariadb:latest
     container_name: mariadb
-    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci  --lower_case_table_names=1
     volumes:
     - /home/$USER/data/mysql:/var/lib/mysql
+    - /mnt/c/Users/joaof/Desktop/my-hapi-fhir/mariadbconf:/etc/mysql/conf.d
     environment:
     - MYSQL_DATABASE=hapi_r4
     - MYSQL_ROOT_PASSWORD=admin
     - MYSQL_USER=admin
     - MYSQL_PASSWORD=admin
     ports:
-    - 3306:3306
+    - "3306:3306"
