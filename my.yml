@@ -5,6 +5,8 @@ spring:
     password: admin
     driverClassName: com.mysql.cj.jdbc.Driver
     max-active: 15
+
+
   batch:
     job:
       enabled: false
@@ -33,7 +35,38 @@ hapi:
       - Goal
       - Binary
       - Subscription
+      - Practitioner
+      - Substance
+      - MedicinalProduct
+      - Coverage
+      - Appointment
+      - Slot
+      - Schedule
+      - Organization
+      - Person
+      - MedicationRequest
+      - Medication
+      - MedicationKnowledge
+      - Procedure
 
+    allow_contains_searches: true
+    allow_external_references: true
+    default_encoding: JSON
+    default_pretty_print: true
+    default_page_size: 20
+    client_id_strategy: ALPHANUMERIC
+    filter_search_enabled: true
+    narrative_enabled: true
+    cors:
+      allow_Credentials: true
+      # These are allowed_origin patterns, see: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#setAllowedOriginPatterns-java.util.List-
+      allowed_origin:
+        - '*'
+
+    # Search coordinator thread pool sizes
+    search-coord-core-pool-size: 20
+    search-coord-max-pool-size: 100
+    search-coord-queue-capacity: 200
     tester:
       home:
         name: Local Tester
