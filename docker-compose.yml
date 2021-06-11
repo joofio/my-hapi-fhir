@@ -7,7 +7,7 @@ services:
     volumes:
      - .:/data/hapi
     environment:
-     SPRING_CONFIG_LOCATION: 'file:////data/hapi/my.yml'
+     SPRING_CONFIG_LOCATION: 'file:////data/hapi/my_r5.yml'
       #      hapi.fhir.default_encoding: "json" 
     depends_on:
         - mariadb
@@ -19,7 +19,7 @@ services:
     - ./data/mysql:/var/lib/mysql
     - ./mariadbconf:/etc/mysql/conf.d
     environment:
-    - MYSQL_DATABASE=hapi_r4
+    - MYSQL_DATABASE=hapi
     - MYSQL_ROOT_PASSWORD=admin
     - MYSQL_USER=admin
     - MYSQL_PASSWORD=admin
