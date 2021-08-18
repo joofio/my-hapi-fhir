@@ -20,7 +20,7 @@ hapi:
         version: 1.0.0
       - url: https://joofio.github.io/medicationIG/package.tgz
         name: medication.ig.example
-        version: 1.0
+        version: 0.1.0
     server_address: http://18.193.162.67/
 
     enable_repository_validating_interceptor: true
