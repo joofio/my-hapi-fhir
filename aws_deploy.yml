@@ -15,9 +15,9 @@ hapi:
   fhir:
     fhir_version: R4
     implementationguides:
-      - url: https://build.fhir.org/ig/HL7/fhir-ips/package.tgz
-        name: hl7.fhir.uv.ips
-        version: 1.0.0
+#      - url: https://build.fhir.org/ig/HL7/fhir-ips/package.tgz
+#        name: hl7.fhir.uv.ips
+#        version: 1.0.0
       - url: https://joofio.github.io/medicationIG/package.tgz
         name: medication.ig.example
         version: 0.1.0
