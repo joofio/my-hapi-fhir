@@ -7,7 +7,7 @@ services:
     volumes:
      - .:/data/hapi
     environment:
-     SPRING_CONFIG_LOCATION: 'file:////data/hapi/my_r5.yml'
+     SPRING_CONFIG_LOCATION: 'file:////data/hapi/my_r4.yml'
       #      hapi.fhir.default_encoding: "json" 
     depends_on:
         - mariadb

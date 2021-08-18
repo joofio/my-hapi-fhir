@@ -14,6 +14,21 @@ spring:
 hapi:
   fhir:
     fhir_version: R4
+    supported_resource_types:
+      - Patient
+      - Observation
+      - StructureDefinition
+      - ValueSet
+      - CodeSystem
+      - NamingSystem
+      - Bundle
+      - CarePlan
+      - Condition
+      - Encounter
+      - Goal
+      - Subscription
+      - Binary
+      - MedicationKnowledge
     implementationguides:
 #      - url: https://build.fhir.org/ig/HL7/fhir-ips/package.tgz
 #        name: hl7.fhir.uv.ips
@@ -25,29 +40,6 @@ hapi:
 
     enable_repository_validating_interceptor: true
 
-    supported_resource_types:
-      - ValueSet
-      - CodeSystem
-      - NamingSystem
-      - Bundle
-      - Binary
-      - Subscription
-      - Substance
-      - MedicinalProduct
-      - MedicationRequest
-      - Medication
-      - Questionaire
-      - StructureDefinition 
-      - ImplementationGuide
-      - CapabilityStatement
-      - SearchParameter
-      - MessageDefinition 
-      - OperationDefinition
-      - CompartmentDefinition
-      - StructureMap
-      - GraphDefinition
-      - ExampleScenario
-      - MedicationKnowledge
 
     allow_contains_searches: true
     allow_external_references: true
