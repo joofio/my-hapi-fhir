@@ -18,7 +18,10 @@ hapi:
       - url: http://build.fhir.org/ig/hl7dk/kl-gateway/branches/remove-slicing-from-entry/package.tgz
         name: hl7.fhir.dk.kl.gateway.care
         version: 1.0
-    server_address: https://18.193.162.67/
+      - url: https://joofio.github.io/medicationIG/full-ig.zip
+        name: myMedicationIG
+        version: 1.0
+    server_address: http://18.193.162.67/
 
     enable_repository_validating_interceptor: true
 
