@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: 'jdbc:mysql://mariadb:3306/hapi'
-    username: zvIxCEFJzhAZLDTNS11U
-    password: $DB_PASS
+    username: admin
+    password: zvIxCEFJzhAZLDTNS11U
     driverClassName: com.mysql.cj.jdbc.Driver
     max-active: 15
 
